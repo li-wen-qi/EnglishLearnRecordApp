@@ -1,10 +1,8 @@
 package com.example.record
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.airbnb.lottie.L
 import com.example.record.RecordHelper.isAlreadCheckedToday
 import com.example.record.RecordHelper.readRecord
 import com.example.record.RecordHelper.saveRecord
@@ -25,11 +23,12 @@ class MainActivity : AppCompatActivity() {
         }
         btnCheckIn.setOnClickListener {
             updateView()
-
         }
         lottieAnimationView.setOnClickListener {
             updateView()
-
+        }
+        btnRecordList.setOnClickListener {
+            RecordListActivity.start(this)
         }
     }
 
